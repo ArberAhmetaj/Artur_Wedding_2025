@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Your Wedding Photo</title>
+</head>
+<body>
+  <h1>📸 Upload Your Wedding Photo</h1>
+  <form id="uploadForm">
+    <input type="file" name="file" accept="image/*" required />
+    <button type="submit">Upload</button>
+  </form>
+  <p id="status"></p>
+
+  <script>
+    const form = document.getElementById('uploadForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const file = form.file.files[0];
+      if (!file) return;
+
+      const formData = new FormData();
+      formData.append('file', file);
+
+      const status = document.getElementById('status');
+      status.textContent = 'Uploading...';
+
+      try {
+        const res = await fetch('https://wedding-upload-1053479623322.us-central1.run.app/upload', {
+          method: 'POST',
+          body: formData
+        });
+        const result = await res.json();
+        if (result.success) {
+          status.textContent = '✅ Upload successful!';
+        } else {
+          status.textContent = '❌ Upload failed: ' + result.error;
+        }
+      } catch (err) {
+        status.textContent = '⚠️ Error: ' + err.message;
+      }
+    });
+  </script>
+</body>
+</html>
