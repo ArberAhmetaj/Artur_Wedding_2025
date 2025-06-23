@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Kapakana&display=swap" rel="stylesheet">
+    
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Upload Your Wedding Photo</title>
@@ -51,8 +53,8 @@
       position: relative;
       background-color: rgba(0, 0, 0, 0.3); /* more transparent */
       border-radius: 50%;
-      width: 220px;
-      height: 220px;
+      width: 25em;
+      height: 25em;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -63,7 +65,7 @@
       padding: 20px;
       box-shadow: 0 0 15px rgba(255, 144, 179, 0.5);
       overflow: visible;
-      z-index: 10;
+      z-index: 0;
     }
 
     /* Rotating circle inside badge */
@@ -71,15 +73,15 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 250px;  /* bigger than badge */
-      height: 250px;
-      margin-top: -125px;
-      margin-left: -125px;
+      width: 20em;  /* bigger than badge */
+      height: 20em;
+      margin-top: -10em;
+      margin-left: -10em;
       border-radius: 50%;
       pointer-events: none;
       animation: spin 6s linear infinite;
       z-index: 5;
-      opacity: 0.5; /* slightly transparent circle */
+      opacity: 0.4; /* slightly transparent circle */
     }
 
     .rotating-circle img {
@@ -90,7 +92,8 @@
     }
 
     .bride-groom {
-      font-size: 1.2em;
+      font-size: 2.2em;
+      font-family: 'Kapakana', cursive;
       color: #ffe3ec;
       margin-bottom: 12px;
       position: relative;
@@ -98,7 +101,8 @@
     }
 
     .date {
-      font-size: 1.1em;
+      font-size: 1.5em;
+      font-family: 'Kapakana', cursive;
       color: #ffd6d6;
       position: relative;
       z-index: 10;
@@ -116,7 +120,7 @@
       text-align: center;
       z-index: 1;
     }
-
+    
     h2 {
       font-size: 1.8em;
       margin-bottom: 20px;
@@ -175,22 +179,42 @@
       .badge {
         /*width: 180px;
         height: 180px;*/
-        font-size: 1em;
+        /*font-size: 1.2em;*/
         padding: 15px;
       }
       .rotating-circle {
         /*width: 200px;
         height: 200px;*/
-        width: 20em;
-        height: 20em;
-        margin-top: -10em;
-        margin-left: -10em;
+        width: 30em;
+        height: 30em;
+        margin-top: -15em;
+        margin-left: -15em;
       }
       .container {
         max-width: 100%;
         padding: 25px;
         border-radius: 15px;
       }
+      .bride-groom {
+      font-size: 3em;
+      }
+      .date {
+      font-size: 2em;
+      }
+      .badge {
+      border-radius: 50%;
+      width: 20em;
+      height: 20em;
+      color: white;
+      font-size: 1.1em;
+      margin: 2em;
+    }
+    .rotating-circle {
+      width: 25em;  /* bigger than badge */
+      height: 25em;
+      margin-top: -12.5em;
+      margin-left: -12.5em;
+    }
     }
   </style>
 </head>
@@ -201,12 +225,12 @@
   <div class="right-side">
     <div class="badge">
       <div class="rotating-circle">
-        <img src="https://themewagon.github.io/invits/assets/img/hero/hero_circle.png" alt="Rotating Circle" />
+        <img class="rotate-img" src="https://img.freepik.com/premium-vector/abstract-glowing-circle-elegant-illuminated-light-ring-vector-illustration_48799-2066.jpg?semt=ais_hybrid&w=740" alt="Rotating Circle" />
       </div>
-      <div class="bride-groom">Artur ❤️ Aida</div>
-      <div class="date">July 13, 2025</div>
+      <div class="bride-groom"><strong>Artur ❤️ Aida</strong></div>
+      <div class="date"><strong>- Korrik 13, 2025 -</strong></div>
+      <div class="date"><strong>- July 13, 2025 -</strong></div>
     </div>
-
     <div class="container">
       <h3><b>📸 Ndani me ne momentet tuaja 📸</b></h3>
 		<br/>
